@@ -1,0 +1,36 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.fijar{
+   overflow: hidden;
+    height: 100vh;
+}
+.character{
+   margin: 3rem;
+   &__titulo{
+    text-align: center;
+    font-size: 5rem;
+    margin: 3rem 0;
+   }
+   &__option{
+    cursor: pointer;
+   }
+   &__grid {
+     display: grid;
+     justify-items: center;
+     justify-content: center;
+     gap: 3rem;
+     margin: 5rem 0;
+     @include m.tablet {
+       grid-template-columns: repeat(2, 1fr);
+       margin: 5rem;
+     }
+     @include m.desktop {
+       grid-template-columns: repeat(4, 1fr);
+     }
+   }
+   &__name{
+    text-align: center;
+    margin-top: 1rem;
+   }
+}
